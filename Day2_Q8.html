@@ -1,0 +1,92 @@
+<html>
+<head>
+<style>
+    body {
+            background: rgb(133,151,246);
+            background: radial-gradient(circle, rgba(133,151,246,1) 0%, rgba(255,57,97,1) 54%);
+           
+        }
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            width: 50%;
+        }
+    #main-div{
+        border-radius: 10px;
+        max-width: 300px;
+        margin: 0 auto;
+        background-color: rgb(239, 239, 239);
+        padding: 20px;
+    }
+    #btn{
+      background-color: rgb(220, 185, 140);
+       color: white;
+       
+    }
+    label{
+        display: block;
+        padding-top: 15px;
+        font-size: 20px;
+    }
+    #cont{
+        display: flex;
+    }
+</style>
+</head>    
+<body>
+    <h1 style="text-align: center;">FeedBack Form</h1>
+    <div id="main-div">
+  
+    <label for="feedback-type">Feedback Type:</label>
+    <select style="width: 100%; height: 30px;" id="feedback-type" name="feedback-type">
+      <option value="general">General</option>
+      <option value="suggestion">Suggestion</option>
+      <option value="complaint">Complaint</option>
+    </select><br>
+  
+    <label  for="message">Message:</label>
+    <textarea style="width: 100%; height: 70px;" id="message" name="message"></textarea>
+  
+    <label for="rating">Website Rating:</label>
+    <div id="cont">
+        <input type="radio" id="rating-1" name="rating" value="1">
+        <label for="rating-1">1</label>
+        <input type="radio" id="rating-2" name="rating" value="2">
+        <label for="rating-2">2</label>
+        <input type="radio" id="rating-3" name="rating" value="3">
+        <label for="rating-3">3</label>
+        <input type="radio" id="rating-4" name="rating" value="4">
+        <label for="rating-4">4</label>
+        <input type="radio" id="rating-5" name="rating" value="5">
+        <label for="rating-5">5</label>
+    </div>
+    <label style="padding-top: 15px;" for="age">Age (10-100):</label>
+    <input style="width: 100%; height: 30px;" type="number" id="age" name="age" min="10" max="100"><br>
+  
+    <label for="email">Email:</label>
+    <input style="width: 100%; height: 30px;" type="email" id="email" name="email" required>
+  
+    <label for="password">Password:</label>
+    <input style="width: 100%; height: 30px;" type="password" id="password" name="password" minlength="8">
+  
+    <label for="website">Website:</label>
+    <input style="width: 100%; height: 30px;" type="url" id="website" name="website">
+  <div style="display: flex;">
+    <input  type="checkbox" id="terms" name="terms">
+    <label for="terms">I agree to the terms and conditions.</label>
+  </div>
+    <!-- <input style="margin-top: 20px;" id="btn" type ="submit" value="Submit"> -->
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</body>
+  </html>
+
+
+  

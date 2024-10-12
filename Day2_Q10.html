@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        nav{
+            margin: 10px;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+            justify-content: space-between;
+            display: flex;
+            border-radius: 3px;
+        }
+        .nav-items{
+            /* padding-right: 30px; */
+            /* gap: 50px; */
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .nav-btn{
+            background-color: rgb(121, 203, 53);
+            padding: 13px 20px;
+            font-family: 'Times New Roman', Times, serif;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            font-size: 20px;
+            margin: auto;
+            /* width: 50%; */
+        }
+        .menu-box > div{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .menu-box > div > p{
+            cursor: pointer;
+        }
+        .body-container{
+            padding: 50px 0px 0px 50px;
+        }
+        .body-container > div:nth-child(2){
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 45px;
+        }
+        .body-container > div:nth-child(2) > h1:nth-child(2){
+            color: rgb(58, 139, 232);
+        }
+        .body-container > div:last-child{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }    
+    </style>
+</head>
+<body>
+   <nav>
+    <div style="padding: 5px 0px 0px 15px;">
+        <img src="C:\Users\omagr\Desktop\MASAI\media\coin.png" alt="coin image">
+    </div>
+    <div class="menu-box" style="display: flex; gap: 30px; margin-right: 10px;">            
+        <div>
+            <p style="font-size: 20px; font-family: 'Times New Roman', Times, serif;">
+                Products</p>
+            <img style="height: 5px; width: 10px;"
+                src="c:\Users\omagr\Desktop\MASAI\media\downarrow.png" alt="down arrow">
+        </div>
+        <p class="nav-items">Coins</p>
+        <p class="nav-items">Ventures</p>
+        <p class="nav-items">Blog</p>
+        <div>
+            <p style="font-size: 20px; font-family: 'Times New Roman', Times, serif;">
+                Company</p>
+            <img style="height: 5px; width: 10px;"
+                src="c:\Users\omagr\Desktop\MASAI\media\downarrow.png" alt="down arrow">
+        </div>
+        <button class="nav-btn">Login To Pro</button>
+    </div>
+   </nav>
+
+   <div class="body-container">
+
+        <div>
+            <img width="200px" height="100px" src="https://s3.ap-southeast-1.amazonaws.com/files.coinswitch.co/images/ventures_logo.svg"  alt="ventures_logo">
+        </div>
+        <div>
+            <h1>Your Inovation</h1>
+            <h1>Our Fuel</h1>
+        </div>
+        <div>
+            <p>CoinSwitch Ventures invests in the most promising Web3 and</p>
+            <p>blockchain projects in India. Does that sound like you?</p>
+        </div>
+   </div>
+</body>
+</html>
