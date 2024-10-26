@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator</title>
+</head>
+<body>
+    <script>
+        const calculatePrice = function(defaultDiscount = 10) {
+            let price, discount;
+
+            while (true) {
+                price = prompt("Please enter the price:");
+
+                // Validate price
+                if (price === null) return; // User canceled
+                price = parseFloat(price);
+                if (isNaN(price) || price < 0) {
+                    alert("Invalid price. Please enter a positive number.");
+                    continue;
+                }
+
+                discount = prompt("Please enter the discount percentage (leave blank for 10%):");
+
+                // Use default discount if no input is provided
+                if (discount === "") {
+                    discount = defaultDiscount;
+                } else {
+                    discount = parseFloat(discount);
+                    // Validate discount
+                    if (isNaN(discount) || discount < 0) {
+                        alert("Invalid discount. Please enter a positive number.");
+                        continue;
+                    }
+                }
+
+                // Calculate final price
+                const finalPrice = price - (price * (discount / 100));
+                alert(`The final price after a discount of ${discount}% is: $${finalPrice.toFixed(2)}`);
+                break; // Exit the loop if everything is valid
+            }
+        };
+
+        // Call the function to execute it
+        calculatePrice();
+    </script>
+</body>
+</html>

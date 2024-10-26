@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting User</title>
+</head>
+<body>
+    <script>
+        const greetUser = function() {
+            const name = prompt("Please enter your name:");
+            
+            // Check if the user entered a name or canceled the prompt
+            if(name === null || name.trim() === "") {
+                alert("Hello, Guest!");
+            } else{
+                alert(`Hello, ${name}!`);
+            }
+        };
+        greetUser();
+    </script>
+</body>
+</html>

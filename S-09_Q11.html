@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Pattern</title>
+</head>
+<body>
+    <script>
+        const printTriangle = function(n) {
+            let output = ""; // Initialize an empty string to build the output
+            
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= i; j++) {
+                    output += j; // Append numbers from 1 to i
+                }
+                output += "\n"; // Add a new line after each row
+            }
+
+            // Display the output in an alert box
+            alert(output);
+        };
+
+        // Example usage
+        printTriangle(4);
+    </script>
+</body>
+</html>

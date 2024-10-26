@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+<body>
+    <script>
+        const generatePassword = function(length, includeNumbers = true, includeSpecialChars = false) {
+            const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+            const numbers = '0123456789';
+            const specialChars = '!@#$%^&*()_+[]{}|;:,.<>?';
+            let passwordChars = lowercaseLetters + uppercaseLetters;
+            let password = '';
+
+            // Ensure at least one uppercase letter
+            password += uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)];
+
+            if (includeNumbers) {
+                passwordChars += numbers;
+                password += numbers[Math.floor(Math.random() * numbers.length)];
+            }
+
+            if (includeSpecialChars) {
+                passwordChars += specialChars;
+                password += specialChars[Math.floor(Math.random() * specialChars.length)];
+            }
+
+            // Fill the rest of the password length
+            for (let i = password.length; i < length; i++) {
+                password += passwordChars[Math.floor(Math.random() * passwordChars.length)];
+            }
+
+            // Shuffle the password to ensure randomness
+            password = password.split('').sort(() => Math.random() - 0.5).join('');
+
+            return password;
+        };
+
+        // Example usage
+        const password = generatePassword(10, true, true);
+        alert(`Generated Password: ${password}`);
+    </script>
+</body>
+</html>
